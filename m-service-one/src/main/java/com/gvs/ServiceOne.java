@@ -27,6 +27,7 @@ public class ServiceOne {
 	
 	@GetMapping("health")
 	public String get() {
-		return "I am " + getClass().getSimpleName();
+		String value = serviceBean.process();
+		return value;
 	}
 }

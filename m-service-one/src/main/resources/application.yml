@@ -3,7 +3,15 @@ server:
 spring:
   application:
     name: service-one
-    
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:2222/eureka}
+  instance:
+    preferIpAddress: true
+        
 logging:
   file:
     name: serviceone.log
